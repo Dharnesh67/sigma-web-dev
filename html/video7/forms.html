@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORMS :)</title>
+    <style>
+      body {
+        color: rgba(4, 4, 4, 0.616);
+        background-color: #bf8ceb;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HELLO i need some information</h1>
+    <div>
+      <form action="post">
+        <label for="username">NaME</label>
+        <input type="text" id="username" placeholder="Enter your name" /><br />
+        <label for="mobile">mobile</label>
+        <input
+          type="text"
+          id="mobile"
+          placeholder="Enter your mobile number"
+        /><br />
+        <label for="email">emial</label>
+        <input type="text" id="email" placeholder="Enter your email"  autofocus/>
+        <div>
+          <input
+            type="radio"
+            id="male"
+            name="gender"
+           value="male"
+          />
+          <label for="male">male</label>
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+            />
+          <label for="female">female</label>
+        </div>
+        <div>
+            <label for="username">check it</label>
+            <input type="checkbox" id="username">
+        </div>
+        <div>
+            <select name="fruits" id="fruits">
+                <option value="apple">apple</option>
+                <option value="banana">banana</option>
+                <option value="guava">guava</option>
+            </select>
+        </div>
+    </div>
+  </body>
+</html>
