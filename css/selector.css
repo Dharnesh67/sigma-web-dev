@@ -1,0 +1,28 @@
+body{
+    background-color: #0c0f45;
+}
+.red{
+    color: antiquewhite;
+    background-color: #160827;
+}
+p{
+    background-color: #0d0e2d;
+    color: rgb(186, 236, 219);
+}
+#green{
+    background-color: green;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+a:active{
+    color: red;
+    background-color:yellow;
+}
+a:visited{
+    color: yellow;
+}
+a:link{
+    colo;
+}
