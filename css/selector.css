@@ -23,6 +23,6 @@ a:active{
 a:visited{
     color: yellow;
 }
-a:link{
-    colo;
+a:hover{
+    background-color: #15ff5f;
 }
