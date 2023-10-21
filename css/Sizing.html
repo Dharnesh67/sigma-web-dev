@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Sizing</title>
+    <style>
+        /* https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units */
+      .box {
+        box-sizing: border-box;
+        border: 2px solid black;
+        width: 80vw;
+        /* automatic margin from both sides */
+        margin:23px auto ; 
+        height: 10vh;
+        background-color: aqua;
+        font-size: 2em;
+      }
+      .box1{
+        box-sizing: border-box;
+        border: 2px solid black;
+        width: 80vw;
+        /* automatic margin from both sides */
+        margin:23px auto ; 
+        background-color: aqua;
+        height: 80vh;
+        /*  1.2 em matlab    ((1.2)*inherit font size )*/
+        font-size: 1.2em;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box"> this is a box </div>
+    <div class="box1">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam       a u t blanditiis d  o l o r e m , labore accusantium, beatae perferendis aperiam laborum maiores iure atque, tempore l i b e r o reprehenderit quos ut quisquam ab! Doloremque reprehenderit eius vitae recusandae maxime facere pariatur saepe quas aliquid, ut temporibus voluptatem cupiditate quasi debitis delectus voluptatum non accusantium sit itaque! Minus ad facilis porro sit illo, suscipit voluptatum, provident eum ut optio aliquid quos quaerat consectetur. Quaerat exercitationem similique debitis voluptatibus porro alias at repudiandae, maxime hic, ea distinctio.
+    </div>
+  </body>
+</html>
