@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specificity_and_cascade</title>
+    <style>
+        .purple{
+            background-color: rgb(210, 10, 255);
+        }.yellow{
+            background-color: rgb(239, 255, 10);
+        }
+        .red{
+            background-color: rgb(255, 10, 10);
+        } 
+        
+        [data-x=a]{
+            color: #8377ba;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p  class="purple yellow red" data-x="a">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ullam sint unde, esse eum dicta tenetur qui fugit, sapiente quidem vel nobis cupiditate quam ab perferendis consequatur? Nihil provident voluptates libero molestiae cupiditate ipsum, in, facilis officiis accusamus sunt, ab mollitia commodi dolores esse reiciendis.
+            
+        </p>
+    </div>
+</body>
+</html>
