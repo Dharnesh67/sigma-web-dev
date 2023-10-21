@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow</title>
+    <style>
+        div{
+            width: 80vw;
+            height: 80vh;
+            background-color: #d46fad;
+            /* SHADOW */
+            box-shadow:17px 11px 5px #33622b;
+        }
+        div>p{
+            border:2px solid red;
+            color: rgb(124, 23, 72);
+        }
+        div>p>span:hover{
+            color: rgb(136, 248, 0);
+        }
+        div>span{
+            display: block;
+            border: 2px solid rgb(0, 0, 0);
+            color: rgb(17, 239, 24);
+        }
+        /* text  shadow */
+        .textshadow{
+            color: azure;
+            text-shadow: 2px 4px 4px black
+        }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam soluta asperiores omnis doloribus explicabo id saepe delectus animi aspernatur, a eos qui itaque dolores, veniam consequatur rerum voluptas adipisci sed sequi quis ab facere?
+       
+    \</p> <span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum autem illo, incidunt quas ad fugiat ut quia eveniet harum. Sit doloribus, officiis consectetur quam vero a voluptates, explicabo praesentium quaerat, neque numquam possimus sequi ipsam nemo asperiores! Maxime repudiandae animi quae doloribus nisi?
+        </span>
+    <p class="textshadow">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat dolorem similique ex. Expedita atque aut animi inventore. Possimus aliquid nemo optio corrupti cum, id dolores blanditiis, porro quo voluptatum eaque consectetur, fugit rem in.</p>
+    </div>
+
+  </body>
+</html>
