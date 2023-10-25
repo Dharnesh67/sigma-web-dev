@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS position</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        border: 2px solid black;
+        width: 80vw;
+        height: 133px;
+        margin: 3px;
+        padding: 3px;
+      }
+      .box1 {
+        position: relative;
+        top: 1px;
+        z-index:  1;
+        background-color: #ad3f3f;
+      }
+      .box2 {
+        position: relative;
+        left: 30px;
+        bottom: 50px;
+        z-index: 1;
+        background-color: #549c9a;
+      }
+      .box3 {
+        position: relative;
+        bottom: 70px;
+        left: 60px;
+        z-index: 1;
+        background-color: #b165b5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate totam
+      vel eveniet aut. Ullam vitae sit dignissimos excepturi maiores harum
+      molestias? Unde ipsam, odit laborum ab cupiditate officia itaque
+      provident.
+    </div>
+    <div class="box box2">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate totam
+      vel eveniet aut. Ullam vitae sit dignissimos excepturi maiores harum
+      molestias? Unde ipsam, odit laborum ab cupiditate officia itaque
+      provident.
+    </div>
+    <div class="box box3">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate totam
+      vel eveniet aut. Ullam vitae sit dignissimos excepturi maiores harum
+      molestias? Unde ipsam, odit laborum ab cupiditate officia itaque
+      provident.
+    </div>
+  </body>
+</html>
