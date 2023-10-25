@@ -9,24 +9,39 @@
         margin: 0;
         padding: 0;
       }
+      .parent{
+        margin: 13px;
+        padding: 13px;
+        border:15px solid #0e2928;
+        /* transfer ,filter or perspective properties can also make an element appears as positioned */
+                /* filter: invert(); */
+
+                /* position: relative; */
+                /* transform: translate(); */
+                /* perspective: oem; */
+      }
       .box {
-        border: 2px solid black;
+        border: 3px solid black;
+        border-radius: 5% ;
+        border-style:dotted;
         width: 80vw;
-        height: 133px;
+        height: 296px;
         margin: 3px;
-        padding: 3px;
+        padding: 30px;
       }
       .box1 {
-        position: relative;
+        /* position: relative; */
+        position: sticky;
         top: 1px;
         z-index:  1;
         background-color: #ad3f3f;
       }
       .box2 {
-        position: relative;
+        position: fixed;
         left: 30px;
         bottom: 50px;
-        z-index: 1;
+        height: 200px;
+        z-index: 2;
         background-color: #549c9a;
       }
       .box3 {
@@ -36,26 +51,53 @@
         z-index: 1;
         background-color: #b165b5;
       }
+      .box4 {
+        position: relative;
+        bottom: 100px;
+        left: 4%;
+        /* z-index: 1; */
+        background-color: #8aa4a2;
+      }
+      .box5 {
+        position: relative;
+        bottom: 80px;
+        left: 5%;
+        z-index: 3;
+        background-color: #4a0189;
+      }
     </style>
   </head>
   <body>
-    <div class="box box1">
+   <div class="parent"> <div class="box box1">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate totam
       vel eveniet aut. Ullam vitae sit dignissimos excepturi maiores harum
       molestias? Unde ipsam, odit laborum ab cupiditate officia itaque
-      provident.
+      provident.      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita consequuntur voluptates laborum necessitatibus! Tempora rerum suscipit aliquam reiciendis. Dolores voluptatum maiores veniam accusamus a harum, quidem error illo dolorem quia tempore nemo, et illum? Quod, necessitatibus! Beatae alias, magni adipisci quisquam minima odio vel reiciendis!
     </div>
     <div class="box box2">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate totam
       vel eveniet aut. Ullam vitae sit dignissimos excepturi maiores harum
       molestias? Unde ipsam, odit laborum ab cupiditate officia itaque
-      provident.
+      provident.      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita consequuntur voluptates laborum necessitatibus! Tempora rerum suscipit aliquam reiciendis. Dolores voluptatum maiores veniam accusamus a harum, quidem error illo dolorem quia tempore nemo, et illum? Quod, necessitatibus! Beatae alias, magni adipisci quisquam minima odio vel reiciendis!
+      <h1>I AM STUCK HELP ME </h1>
     </div>
     <div class="box box3">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate totam
       vel eveniet aut. Ullam vitae sit dignissimos excepturi maiores harum
       molestias? Unde ipsam, odit laborum ab cupiditate officia itaque
-      provident.
+      provident.      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita consequuntur voluptates laborum necessitatibus! Tempora rerum suscipit aliquam reiciendis. Dolores voluptatum maiores veniam accusamus a harum, quidem error illo dolorem quia tempore nemo, et illum? Quod, necessitatibus! Beatae alias, magni adipisci quisquam minima odio vel reiciendis!
     </div>
+    <div class="box box5">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate totam
+      vel eveniet aut. Ullam vitae sit dignissimos excepturi maiores harum
+      molestias? Unde ipsam, odit laborum ab cupiditate officia itaque
+      provident.      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita consequuntur voluptates laborum necessitatibus! Tempora rerum suscipit aliquam reiciendis. Dolores voluptatum maiores veniam accusamus a harum, quidem error illo dolorem quia tempore nemo, et illum? Quod, necessitatibus! Beatae alias, magni adipisci quisquam minima odio vel reiciendis!
+    </div>
+    <div class="box box4">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate totam
+      vel eveniet aut. Ullam vitae sit dignissimos excepturi maiores harum
+      molestias? Unde ipsam, odit laborum ab cupiditate officia itaque
+      provident.      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita consequuntur voluptates laborum necessitatibus! Tempora rerum suscipit aliquam reiciendis. Dolores voluptatum maiores veniam accusamus a harum, quidem error illo dolorem quia tempore nemo, et illum? Quod, necessitatibus! Beatae alias, magni adipisci quisquam minima odio vel reiciendis!
+    </div></div>
   </body>
 </html>
