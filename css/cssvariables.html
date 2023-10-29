@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Varialble</title>
+    <style>
+
+        :root{
+            --color:rgb(76, 76, 233);
+            --a:yellow;
+        }
+        *{
+            margin: 0;padding: 0;
+        }
+        .nav{
+
+            border:7px solid var(--color);
+            background-color: #c893a3;
+        }
+        .container{
+
+            --a:rgb(127, 45, 165);
+            border: 3px solid var(--a);
+        background-color: #91fc8f;
+        }
+        .container:hover{
+            padding: 10px;
+                background-color: #ff002b71;
+        }
+        ul{
+            display: flex;
+        }
+        ul li:first-child:hover{
+            padding: 3%;
+            --a:rgb(17, 227, 255);/* local variable*/
+            background-color: var(--a);
+        }
+        ul li:hover{
+            --a:rgb(255, 13, 0);/* local variable*/
+            background-color: var(--a);
+        }
+        ul li{/*matlab ul me jo li h */
+            background-color: var(--a); /*Global  variable*/
+            list-style:none;
+            padding: 10px;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, ab distinctio odit harum molestiae, cumque nostrum accusantium perspiciatis consequatur repellat, nisi nihil. Totam recusandae dolorum dolor similique maiores quod vero repellat consequuntur inventore excepturi quae quibusdam debitis harum perspiciatis dolores, ex temporibus iste magnam? Praesentium?
+    </div>
+</body>
+</html>
