@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GRID Excercise website clone</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .right ul {
+        display: flex;
+        list-style: none;
+        gap: 28px;
+        justify-content: flex-end;
+        margin: 41px;
+        cursor: pointer;
+      }
+      .right ul li svg {
+        padding: 0px 2px;
+        cursor: grab;
+      }
+      nav {
+        background-color: #00000079;
+        border-radius: 10px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: space-around;
+      }
+      .logo img {
+        width: 10em;
+        margin: 10px 0 0 60px;
+        padding: 10px;
+      }
+      .first {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 47px;
+        padding: 41px;
+        margin: 10px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .first img {
+        width: 80px;
+      }
+      .first span {
+        font-size: 50px;
+        color: rgb(32, 30, 30);
+      }
+      .first button {
+        font-size: 12px;
+        /* font-style: bold; */
+        font-weight: 700;
+        padding: 14px 16px;
+        background-color: rgba(12, 146, 208, 0.741);
+        border: none;
+        border-radius: 6px;
+        color: white;
+      }
+      p{
+        font-size: 20px;
+        width: 50vw;
+        text-align: center;
+      }
+      .flex{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo"><img src="Dark-logo.png" alt="" /></div>
+        <div class="right">
+          <ul>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+                height="12px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M5.25589 16C3.8899 15.0291 3 13.4422 3 11.6493C3 9.20008 4.8 6.9375 7.5 6.5C8.34694 4.48637 10.3514 3 12.6893 3C15.684 3 18.1317 5.32251 18.3 8.25C19.8893 8.94488 21 10.6503 21 12.4969C21 14.0582 20.206 15.4339 19 16.2417M12 21V11M12 21L9 18M12 21L15 18"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>Products</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+                height="12px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M5.25589 16C3.8899 15.0291 3 13.4422 3 11.6493C3 9.20008 4.8 6.9375 7.5 6.5C8.34694 4.48637 10.3514 3 12.6893 3C15.684 3 18.1317 5.32251 18.3 8.25C19.8893 8.94488 21 10.6503 21 12.4969C21 14.0582 20.206 15.4339 19 16.2417M12 21V11M12 21L9 18M12 21L15 18"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>Pricing</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+                height="12px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M5.25589 16C3.8899 15.0291 3 13.4422 3 11.6493C3 9.20008 4.8 6.9375 7.5 6.5C8.34694 4.48637 10.3514 3 12.6893 3C15.684 3 18.1317 5.32251 18.3 8.25C19.8893 8.94488 21 10.6503 21 12.4969C21 14.0582 20.206 15.4339 19 16.2417M12 21V11M12 21L9 18M12 21L15 18"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>Resources</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+                height="12px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M5.25589 16C3.8899 15.0291 3 13.4422 3 11.6493C3 9.20008 4.8 6.9375 7.5 6.5C8.34694 4.48637 10.3514 3 12.6893 3C15.684 3 18.1317 5.32251 18.3 8.25C19.8893 8.94488 21 10.6503 21 12.4969C21 14.0582 20.206 15.4339 19 16.2417M12 21V11M12 21L9 18M12 21L15 18"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>About Us</span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="first">
+        <span
+          >Download <b>UltraEdit</b> for Windows
+          <img
+            src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png"
+            alt=""
+          />
+        </span>
+
+        <p>
+          Download and try UltraEdit before you buy it! This download includes
+          the full Windows version of the text editor.
+        </p>
+        <button>DOWNLOAD MAC OR LINUX VERSION</button>
+      </section>
+      <section class="second">
+        <div class="flex">
+            <img src="" alt="">
+            <div style="font-size: 25px;">Download UltraEdit</div>
+            <div> v2023.1(released 08/16/2023) | Hotfix</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

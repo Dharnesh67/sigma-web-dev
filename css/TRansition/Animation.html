@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMATION</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .container{
+            background-color: #00222c;
+            width: 50vw;
+            height: 70vh;
+        }
+        .box{
+            width: 5vw;
+            height: 4vh;
+            /* background-color:rgb(16, 16, 140); */
+            animation-name: dharmesh;
+            animation-duration: 3s;
+            animation-timing-function:ease-in;
+            animation-delay: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+        @keyframes dharmesh{
+            from{
+                background-color: #d49494;
+            }
+            to{
+                background-color: rgb(46, 196, 255);
+                transform: translateX(50vw) translateY(40vh);
+            }
+        }
+    </style>
+</head>
+<body>
+     <div class="container"><div class="box">BOX</div></div>
+</body>
+</html>
