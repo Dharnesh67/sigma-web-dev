@@ -1,0 +1,21 @@
+body{
+    display:flex;
+    flex-direction:row;
+}
+.container img{
+    margin: 0;
+    padding: 0;
+    width: 43vw;
+    height: 60vh;
+    object-fit: contain;
+    filter:blur(10px);
+}
+img{
+    width: 70vw;
+    height: 60vh;
+    object-fit: contain;
+    filter: drop-shadow(25px 11px 15px rgba(0, 0, 0, 0.711));
+}
+.invert img{
+     filter: invert();
+}
