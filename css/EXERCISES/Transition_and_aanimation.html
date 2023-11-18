@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 8</title>
+</head>
+
+    <style>
+        
+        .text{
+            font-size: 40px;
+            background-color: rgb(0, 255, 170);
+            border-radius: 13px;
+            text-align: center;
+            width: 30vw;
+            margin: 10px 279px;
+            padding-top: 12px;
+            font-family:monospace ;
+            position: relative;
+            left: 16%;
+        }
+        .blue{
+            border: 2px solid rgb(62, 4, 4);
+            border-radius: 20px;
+            background-color: rgb(110, 110, 228);
+            width: 70vw;
+            height: 70vh;
+            position: relative;
+            left: 10%;
+        }
+        .ball{
+            background-color: rgb(251, 255, 0);
+            width: 60px;
+            height: 60px;
+            border-radius: 40px;
+            position: absolute;
+            text-align: center;
+            bottom: 0;
+            animation: yaxis 5s linear 0s infinite alternate-reverse;
+        }
+        @keyframes yaxis {
+            0%{
+                left: 0%;
+                bottom: 0%;
+            }
+            10%{
+                left: 10%;
+                bottom: 60%;
+            }
+            30%{
+                left: 40%;
+                bottom: 0%;
+            }
+            40%{
+                left: 60%;
+                bottom: 40%;
+            }
+            50%{
+                left: 80%;
+                bottom: 0;
+            }
+            60%{
+                left: 90%;
+                bottom: 20%;
+            }
+            70%{
+                left: 95%;
+                bottom: 0;
+            }
+        }
+    </style>
+<body>
+    <div class="text">Bouncing Ball</div>
+    <div class="blue"><div class="ball">Ball</div></div>
+    
+</body>
+</html>
