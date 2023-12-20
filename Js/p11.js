@@ -9,3 +9,10 @@ for(let i =a-1;i>=1;i--){
     a*=i;
 }
 console.log(a);
+function factorial(a){
+    let arr =Array.from(Array(a+1).keys())
+    // console.log(arr.slice(1,));
+    let c=arr.slice(1,).reduce((a,b)=> a*b)
+    return c;
+}
+console.log(factorial(6));

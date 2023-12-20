@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: 20px;
+            padding: 30px;
+            border: 2px solid rgb(184, 180, 180);
+            width: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">BOX1</div>
+    <div class="box">BOX1</div>
+    <div class="box">BOX1 .</div>
+    <div id="blue" class="box">BOX1</div>
+    <div class="box">BOX1</div>
+    <script>
+        console.log("Dharmesh Raikwar")
+        let Box=document.getElementsByClassName("box");
+        console.log(Box);
+        Box[1].style.backgroundColor="red"
+        Box[2].style.backgroundColor="pink"
+        Box[0].style.backgroundColor="violet"
+        let blue=document.getElementById("blue");
+        blue.style.backgroundColor="cyan"
+        document.querySelector(".box").style.backgroundColor="light  green"
+    </script>
+</body>
+</html>

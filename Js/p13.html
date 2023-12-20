@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website builder</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+    <script>
+        function createcard(title,cname,views,months,duration,thumbnail){
+            let tt =document.createElement("div");
+            tt.innerHTML=title
+          let a= document.querySelector(".container");
+          a.append(tt);
+            let cn =document.createElement("div");
+            cn.innerHTML=cname
+            let v =document.createElement("div");
+            v.innerHTML=views
+            let m =document.createElement("div");
+            m.innerHTML=months+" months"
+        //   let b= document.querySelector(".container");
+          a.append(cn);
+          a.append(v);
+          a.append(m);
+        }
+        createcard("Sigma web dev video #13","code with harry","560k","7","31:22","https://i.ytimg.com/vi/Co0tTeuUVhU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDeppMQUiAio8HXUFL2k5mVk8KNwA");
+    </script>
+</body>
+</html>

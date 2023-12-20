@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insertion AND removing</title>
+    <style>
+      .box {
+        width: 170px;
+        height: 70px;
+        border: 2px solid black;
+        margin: 15px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">Hey i am a box</div>
+      <div class="box">Hey i am a box</div>
+      <div class="box">Hey i am a box</div>
+      <div id="l" class="box">Hey i am a box 3</div>
+    </div>
+    <script>
+    //    alert("you alright!!");
+       document.querySelector(".box").getAttribute("style")
+       document.querySelector(".box").setAttribute("style","display:flex")
+       let div=document.createElement("div");
+       div.innerHTML="Hello i am inserted <b>HELLO</b>"
+       div.setAttribute("class","created")
+    //    document.querySelector(".container").prepend(div)
+       document.querySelector(".container").append(div)
+       let cont =document.querySelector(".container")
+       cont.insertAdjacentHTML("beforebegin","<h1>I am inserted</h1>")
+       let del=document.getElementById("l")
+       del.remove() // id wala remove kardo 
+    </script>
+  </body>
+</html>
