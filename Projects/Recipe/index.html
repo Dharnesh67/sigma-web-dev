@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Recipe Website</title>
+</head>
+<body>
+    <header style="background-color: #161A30; color: white;">
+        <h1>Recipe Website</h1>
+    </header>
+    
+    <main style="background-color: #31304D; color: white;">
+        <section class="recipe-cards">
+            <!-- Recipe cards go here -->
+        </section>
+        
+        <section class="upload-form">
+            <h2>Upload Your Recipe</h2>
+            <form id="recipeForm">
+                <label for="recipeName">Recipe Name:</label>
+                <input type="text" id="recipeName" name="recipeName" required>
+
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+
+                <label for="instructions">Instructions:</label>
+                <textarea id="instructions" name="instructions" rows="4" required></textarea>
+
+                <button type="button" onclick="uploadRecipe()">Upload Recipe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer style="background-color: #161A30; color: white;">
+        <p>&copy; 2024 Recipe Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

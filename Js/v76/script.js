@@ -40,3 +40,9 @@ main()
 //     console.log(data)
 //     console.log("process ")
 // })
+function getrandom() {
+        let c1 = Math.ceil(0 + Math.random() * 200);
+        let c2 = Math.ceil(0 + Math.random() * 200);
+        let c3 = Math.ceil(0 + Math.random() * 200);
+        return `rgb(c2,c1,c3)`;
+      }

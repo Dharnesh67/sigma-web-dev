@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.recipe-cards {
+    /* Style your recipe cards here */
+}
+
+.upload-form {
+    background-color: #B6BBC4;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+button {
+    background-color: #161A30;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #31304D;
+}

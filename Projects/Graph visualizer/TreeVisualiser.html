@@ -1,0 +1,237 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tree Visualizer</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    svg {
+      overflow: visible;
+    }
+  </style>
+</head>
+<body>
+
+<button onclick="addChild()">Add Child</button>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+<script>
+  // Initial tree data with different names
+  let treeData = {
+    name: 'Organization',
+    children: [
+      {
+        name: 'CEO',
+        children: [
+          { name: 'Manager1' },
+          { name: 'Manager2' },
+          { name: 'Manager3' },
+          { name: 'Manager4' }
+        ]
+      },
+      {
+        name: 'CTO',
+        children: [
+          { name: 'Developer1' },
+          { name: 'Developer2' },
+          { name: 'Designer1' },
+          { name: 'Tester1' }
+        ]
+      }
+    ]
+  };
+
+  // Set up SVG container
+  const svg = d3.select('body').append('svg')
+    .attr('width', 600)
+    .attr('height', 400)
+    .append('g')
+    .attr('transform', 'translate(50,50)'); // Add margin for better visibility
+
+  // Create a tree layout
+  const treeLayout = d3.tree().size([500, 300]);
+
+  // Create a hierarchical data structure
+  const root = d3.hierarchy(treeData);
+
+  // Generate the tree structure
+  treeLayout(root);
+
+  // Add links
+  svg.selectAll('path.link')
+    .data(root.links())
+    .enter().append('path')
+    .attr('class', 'link')
+    .attr('d', d3.linkHorizontal()
+      .x(d => d.y)
+      .y(d => d.x));
+
+  // Add nodes
+  const nodes = svg.selectAll('g.node')
+    .data(root.descendants())
+    .enter().append('g')
+    .attr('class', 'node')
+    .attr('transform', d => `translate(${d.y},${d.x})`);
+
+  // Add circles to represent nodes
+  nodes.append('circle')
+    .attr('r', 10);
+
+  // Add labels to nodes
+  nodes.append('text')
+    .attr('dy', 3)
+    .attr('x', d => d.children ? -13 : 13)
+    .style('text-anchor', d => d.children ? 'end' : 'start')
+    .text(d => d.data.name);
+
+  // Function to add a new child node
+  function addChild() {
+    const randomParentIndex = Math.floor(Math.random() * root.children.length);
+    const newNode = { name: 'New Employee' + (Math.floor(Math.random() * 100) + 1) };
+
+    root.children[randomParentIndex].children.push(newNode);
+    updateTree();
+  }
+
+  // Function to update the tree visualization
+  function updateTree() {
+    // Regenerate the tree structure
+    treeLayout(root);
+
+    // Update links
+    svg.selectAll('path.link')
+      .data(root.links())
+      .transition().duration(500)
+      .attr('d', d3.linkHorizontal()
+        .x(d => d.y)
+        .y(d => d.x));
+
+    // Update nodes
+    const updatedNodes = svg.selectAll('g.node')
+      .data(root.descendants());
+
+    updatedNodes.transition().duration(500)
+      .attr('transform', d => `translate(${d.y},${d.x})`);
+  }
+</script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binary Search Tree Visualizer</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    svg {
+      overflow: visible;
+    }
+  </style>
+</head>
+<body>
+
+<label for="inputArray">Input Array:</label>
+<input type="text" id="inputArray" placeholder="Enter comma-separated numbers">
+<button onclick="generateBST()">Generate BST</button>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+<script>
+  let bstRoot = null; // Global variable to store the root of the BST
+
+  // Set up SVG container
+  const svg = d3.select('body').append('svg')
+    .attr('width', 600)
+    .attr('height', 400)
+    .append('g')
+    .attr('transform', 'translate(50,50)'); // Add margin for better visibility
+
+  // Create a tree layout
+  const treeLayout = d3.tree().size([500, 300]);
+
+  // Function to generate a BST from an array
+  function generateBST() {
+    // Clear the SVG before generating a new tree
+    svg.selectAll('*').remove();
+
+    const inputArray = document.getElementById('inputArray').value.split(',').map(Number);
+    bstRoot = buildBST(inputArray);
+
+    // Generate the tree structure
+    treeLayout(bstRoot);
+
+    // Update links
+    svg.selectAll('path.link')
+      .data(bstRoot.links())
+      .enter().append('path')
+      .attr('class', 'link')
+      .attr('d', d3.linkHorizontal()
+        .x(d => d.y)
+        .y(d => d.x));
+
+    // Add nodes
+    const nodes = svg.selectAll('g.node')
+      .data(bstRoot.descendants())
+      .enter().append('g')
+      .attr('class', 'node')
+      .attr('transform', d => `translate(${d.y},${d.x})`);
+
+    // Add circles to represent nodes
+    nodes.append('circle')
+      .attr('r', 10);
+
+    // Add labels to nodes
+    nodes.append('text')
+      .attr('dy', 3)
+      .attr('x', d => d.children ? -13 : 13)
+      .style('text-anchor', d => d.children ? 'end' : 'start')
+      .text(d => d.data.value);
+  }
+
+  // Function to build a BST from an array
+  function buildBST(array) {
+    if (!array.length) {
+      return null;
+    }
+
+    const root = { value: array[0], children: [] };
+
+    for (let i = 1; i < array.length; i++) {
+      insertNode(root, array[i]);
+    }
+
+    return d3.hierarchy(root);
+  }
+
+  // Function to insert a node into a BST
+  function insertNode(root, value) {
+    if (value < root.value) {
+      if (root.children[0]) {
+        insertNode(root.children[0], value);
+      } else {
+        root.children[0] = { value, children: [] };
+      }
+    } else {
+      if (root.children[1]) {
+        insertNode(root.children[1], value);
+      } else {
+        root.children[1] = { value, children: [] };
+      }
+    }
+  }
+</script>
+
+</body>
+</html>

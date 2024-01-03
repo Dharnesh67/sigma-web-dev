@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header .image img:hover {
+  border: 1px solid white;
+}
+header nav p:hover {
+  border: 1px solid white;
+}
+header {
+  height: 60px;
+  background-color: rgb(19, 25, 33);
+  position: static;
+}
+header .image img {
+  width: 100px;
+  border-radius: 3px;
+  margin: 2px 0 1px 2px;
+  padding: 15px 9px 4px 8px;
+}
+nav {
+  display: flex;
+  gap: 20px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: small;
+  color: white;
+  display: flex;
+  height: 37px;
+  background-color: rgb(35, 47, 62);
+}
+nav p{
+    display: flex;
+   padding: 10px 0 0 0;
+}
+nav p:first-child{
+    display: flex;
+   margin: 10px 10px 11px 10px;
+}
