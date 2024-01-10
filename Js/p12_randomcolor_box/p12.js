@@ -1,5 +1,3 @@
-
-
 // console.log(color)
 function getrandom(){
     let c1=Math.ceil(0+Math.random()*200)

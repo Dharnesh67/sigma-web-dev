@@ -1,10 +1,10 @@
 alert("Relaod Karna h pakka ??")
-var a=2;
+var a=7;
 var b=4;
 console.log(a+b);
-let o={
+const o={
     name:"mayank"
-
 }
-o.lint="code"
+o.num="6395"
+o.marks="9"
 console.log(o);

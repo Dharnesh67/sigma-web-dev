@@ -1,6 +1,7 @@
+// array are mutable in javascript
 console.log(`Array Lecture`)
 let arr=[1,2,3,4,5,6]
-console.log(arr,typeof arr)
+console.log(arr,typeof(arr))
 console.log(arr.length)
 console.log(arr[0])
 arr[4]=99 // mutable
@@ -13,7 +14,7 @@ arr.push("003")
 console.log(arr) 
 arr.shift()
 arr.unshift(34)
-console.log(arr )
+console.log(arr)
 delete arr[3]
 console.log(arr )
 let b =[2,3,4,5,6,67]
