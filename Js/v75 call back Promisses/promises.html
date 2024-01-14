@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promises</title>
+
+    <style>
+      .container {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        color: white;
+        border: 2px solid rgb(255, 255, 255);
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        text-align: center;
+        font-size: 30px;
+        line-height: 200px;
+        border-radius: 80px;
+      }
+    </style>
+    <div class="container">Hello</div>
+    <script>
+      // Function to generate a random RGB color
+      function getRandomColor() {
+        const c1 = Math.ceil(Math.random() * 200);
+        const c2 = Math.ceil(Math.random() * 200);
+        const c3 = Math.ceil(Math.random() * 200);
+        return `rgb(${c1},${c2},${c3})`;
+      }
+
+      // Set the background color of the body
+      document.body.style.backgroundColor = getRandomColor();
+
+      // Create a new Promise
+      const prom1 = new Promise((resolve, reject) => {
+        const a = Math.random();
+        if (a < 0.5) {
+          reject("I am rejected");
+        } else {
+          setTimeout(() => {
+            console.log("the first promise resolved1");
+            resolve("hello world");
+          }, 4000);
+        }
+      });
+
+      const prom2 = new Promise((resolve, reject) => {
+        const a = Math.random();
+        if (a < 0.5) {
+          reject("I am rejected");
+        } else {
+          setTimeout(() => {
+            console.log("the first promise resolved2");
+            resolve("hello world");
+          }, 4000);
+        }
+      });
+let prom3 = Promise.all([prom1, prom2]);
+      // Handle the Promise's resolution or rejection
+      prom3
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    </script>
+  </head>
+  <body></body>
+</html>

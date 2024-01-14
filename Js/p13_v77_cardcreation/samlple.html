@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        body{
+            display: flex;
+            overflow: scroll;
+        }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
+        width: 100px;
+        background-color: #48dfb9;
+        border: 2px solid black;
+        margin: 30px;
+      }
+      .box {
+        font-family: monospace;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+     function createele(i){
+        let html = `<div class="container">
+        <div class="box">
+            BOX==${i}
+        </div>
+    </div>`;
+    let n=document.createElement("div");
+    n.innerHTML=html;document.querySelector("body").append(n);
+    
+     }
+    for(let i =0;i<10;i++){
+        createele(i);
+    }
+    </script>
+  </body>
+</html>

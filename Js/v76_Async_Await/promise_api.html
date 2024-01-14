@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api wala code</title>
+  </head>
+  <body>
+    <script>
+      // write a code to execute promise using following api https://jsonplaceholder.typicode.com/todos/1
+      // and print the response in console
+      // use fetch api
+      // use async await
+      // use try catch
+      // use arrow function
+      // use template literals
+      async function getData() {
+        let x = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+        // let data =await x.json();
+        let data1 =await x.text();
+        // console.log(data);
+        console.log(data1);
+        return data1;
+      }
+      async function main() {
+          let data = await getData();
+          console.log(data)
+      }
+      main();
+    </script>
+  </body>
+</html>
