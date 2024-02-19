@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>magical sorting hat</title>
+</head>
+<body>
+    <script>
+        // indian names array
+        let arr=['ram', 'shyam', 'moh', 'rohan', 'sohan', 'mohan', 'Anjali', 'Rahul', 'Raj', 'Rohit', 'Rajesh', 'Rakesh', 'Rajat', 'Rajeev', 'Rajendra', 'Rajkumar', 'R', 'Sita', 'Gita', 'Vijay', 'Amit', 'Sandeep', 'Preeti', 'Neha', 'Aryan', 'Aksh'];
+        let house=['gryffindor','hufflepuff','ravenclaw','slytherin']
+        let obj={};
+        for (const students of arr) {
+            if(students.length<6){
+                obj[students]=house[0];
+            }
+            else if(students.length<8){
+                obj[students]=house[1];
+            }
+            else if(students.length<12){
+                obj[students]=house[2];
+            }
+            else{
+                obj[students]=house[3];
+            }
+        }
+        document.body.innerHTML=`<pre>${JSON.stringify(obj,null,2)}</pre>`;
+        console.log(obj);   
+    </script>
+</body>
+</html>

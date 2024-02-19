@@ -17,13 +17,16 @@ body {
   height: 500px;
   overflow: hidden;
   position: relative;
-  animation: yaxis 9s ease-in-out alternate-reverse infinite running;
+  /* animation: yaxis 9s ease-in-out alternate-reverse infinite running; */
 }
 .box {
+  overflow: hidden;
   width: 300px;
   height: 400px;
-  border: 12px solid rgb(64, 255, 0);
-  border-radius: 80px 0 100px 0;
+  border: 12px solid rgb(0, 0, 0);
+  /* border-radius: 80px 0 100px 0; */
+  padding-left: 30px;
+  font-size: small;
 }
 @keyframes yaxis {
   0% {
@@ -43,15 +46,15 @@ body {
     top: 50%;
   }
   50% {
-    left: 70%;
+    left: 60%;
     top: 0%;
   }
   60% {
-    left: 90%;
+    left: 80%;
     top: 50%;
   }
   70% {
-    left: 95%;
+    left: 85%;
     top: 0%;
   }
 }

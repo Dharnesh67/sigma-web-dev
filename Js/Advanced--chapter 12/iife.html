@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iife</title>
+  </head>
+  <body>
+    <script>
+      async function getData() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("Data is here");
+          }, 2000);
+        });
+      }
+      (async function () {
+        // this is an iife function
+        // document.title = "RELOADED TITLE";
+        // console.log(document.title);
+        // console.log(document.body);
+        // document.body.style.backgroundColor = "green";
+        let a = await getData();
+        console.log(a);
+      })();
+      //   async function main() {
+      //     let a = await getData();
+      //     console.log(a);
+      //   }
+      //   main()
+    </script>
+  </body>
+</html>
