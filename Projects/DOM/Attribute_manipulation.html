@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <a name="list">the list</a>
+    <ul>
+        <li><a href="http://google.com">http://google.com</a></li>
+        <li><a href="/tutorial">/tutorial.html</a></li>
+        <li><a href="local/path">local/path</a></li>
+        <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+        <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+        <li><a href="http://internal.com/test">http://internal.com/test</a></li>
+    </ul>
+    <!-- 
+        Change all external links color to green
+        Execption :- 
+                    1. Its href must have :// in it
+                    2. It should not start with http://internal.com 
+     -->
+</body>
+    <script>
+        let links = document.querySelectorAll('a');
+        console.log(links);
+        let b =Array.from(links);
+        console.log(b);
+        for(let i=0; i<b.length; i++){
+           if(b[i].href.includes("http://") && !b[i].href.includes("://internal")){
+            b[i].style.color="green";
+           }
+        }
+
+    </script>
+</html>

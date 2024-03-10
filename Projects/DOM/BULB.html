@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVE BIJlI</title>
+    <style>
+        body{
+            background: #000;
+        }
+        .img1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: animate 5s linear infinite;
+        }
+        .img2{
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: animate 5s linear infinite reverse;
+        }
+
+    </style>
+</head>
+<body>
+    <img class="img1" width="830" src="https://media.istockphoto.com/id/960813498/vector/light-bulb-idea-lamp-outline-icon-vector.jpg?s=612x612&w=0&k=20&c=jISHQ-lwMpWw7PC56Pll4XFjXrwAvKXCAnYPYMHutJg=" alt="">
+    <img class="img2" width="800" src="https://media.istockphoto.com/id/1150776990/vector/%C3%B0%C3%B0%C2%B5%C3%B0%C3%B1%C3%B0%C3%B1%C3%B0%C3%B0%C3%B1%C3%B0-2.jpg?s=612x612&w=0&k=20&c=J8qy9IxZ42caK1yDwu8Y9UNhX7fEhHVC-8A_WRXzKTA=" alt="">
+    <button class="button">HELLO</button>
+</body>
+<script>
+        document.querySelector('.button').addEventListener('click', function(){
+            if(document.querySelector('.img1').style.display == 'none'){
+                document.querySelector('.img1').style.display = 'block';
+                document.querySelector('.img2').style.display = 'none';
+            }else{
+                document.querySelector('.img1').style.display = 'none';
+                document.querySelector('.img2').style.display = 'block';
+            }
+        });
+       
+</script>
+</html>
