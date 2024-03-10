@@ -26,7 +26,7 @@ function createcard(title, cname, views, months, duration, thumbnail) {
     tt.innerHTML = html
     document.querySelector(".container").append(tt);
 }
-for (let i = 1; i <15; i++) {
+for (let i = 1; i <18; i++) {
     if (i % 2 == 0) { createcard("Sigma web dev video kanye is best", "code with harry", "300k", "1", "31:22", "https://i.ytimg.com/vi/Co0tTeuUVhU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDeppMQUiAio8HXUFL2k5mVk8KNwA")}
     else{
         if(i%3==0){
