@@ -3,80 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>twitter (Home)</title>
+    <title>Home / X</title>
     <link rel="stylesheet" href="./css/output.css" />
     <link rel="shortcut icon" href="img/X_icon_2.svg.png" type="image/x-icon" />
-    <!-- <style>
-        .sidebar>ul>li{
-            display: flex;
-            /* justify-content: center; */
-            margin-left: 2cqh;
-            align-items: center;
-            padding: 10px;
-            gap: 20px;
-        }
-    </style> -->
+    <style>
+      /* .sidebar > ul > li:hover {
+        border: 1px solid rgba(255, 255, 255, 0);
+        background-color: rgba(0, 204, 255, 0.133);
+        border-radius: 20px;
+        width: 80%;
+      } */
+    </style>
   </head>
   <body class="bg-black">
-    <div class="flex container mx-auto">
-      <div class="left h-screen w-1/3 rounded-2xl">
-        <div class="logo">
-          <img class="w-8 h-10 ml-2 mt-2 text-white" src="img/premium.svg" alt="X Icon" />
+    <div class="flex container mx-auto h-10">
+      <div class="left h-screen w-[50%] rounded-2xl">
+        <div class="logo mt-2">
+          <img class="w-8 m-auto h-10 text-white" src="img/premium.svg" alt="X Icon" />
         </div>
-        <div class="sidebar text-white text-xl">
-            <ul class="flex-col space-y-8 mt-8 ml-5" >
-                <li class="flex items-center ml-2cqh gap-10 " >
-                    <img class="w-5" src="img/home.svg" alt="">
-                    Home
-                </li>
-                <li class="flex items-center ml-2cqh gap-10">
-                    <img class="w-5" src="img/search.svg" alt="">
-                    Explore
-                </li>
-                <li class="flex items-center ml-2cqh gap-10">
-                    <img class="w-5" src="img/notify.svg" alt="">
-                    notification
-                </li>
-                <li class="flex items-center ml-2cqh gap-10">
-                    <img class="w-5" src="img/mess.svg" alt="">
-                    Message
-                </li>
-                <li class="flex items-center ml-2cqh gap-10">
-                    <img class="w-5" src="img/Grok.svg" alt="">
-                    Grok
-                </li>
-                <li class="flex items-center ml-2cqh gap-10">
-                    <img class="w-5" src="img/List.svg" alt="">
-                    Lists
-                </li>
-                <li class="flex items-center ml-2cqh gap-10">
-                    <img class="w-5" src="img/Book.svg" alt="">
-                    Bookmarks
-                </li>
-                <li class="flex items-center ml-2cqh gap-10">
-                    <img class="w-5" src="img/group_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-                    Communities
-                </li>
-                <li class="flex items-center ml-2cqh gap-10">
-                    <img class="w-5" src="img/premium.svg" alt="">
-                    Premium
-                </li>
-             
-                <li class="flex items-center ml-2cqh gap-10">
-                    <img class="w-5" src="img/profile.svg" alt="">
-                    Profile
-                </li>
-             
-                <li class="flex items-center ml-2cqh gap-10">
-                    <img class="w-5" src="img/more.svg" alt="">
-                    More
-                </li>
-             
-            </ul>
+        <div class="sidebar text-white text-xl flex justify-end">
+          <ul class="flex-col space-y-3 mt-2 px-20">
+            <li class="flex items-center text-[20px] font-bold justify-start gap-[30px] w-fit p-2.5 hover:cursor-pointer hover:bg-opacity-[15%] hover:rounded-full hover:bg-blue-300">
+              <img class="w-5" src="img/home.svg" alt="" />
+              Home
+            </li>
+            <li class="flex items-center text-[20px]  justify-start gap-[30px] w-fit p-2.5 hover:cursor-pointer hover:bg-opacity-[15%] hover:rounded-full hover:bg-blue-300">
+              <img class="w-5" src="img/search.svg" alt="" />
+              Explore
+            </li>
+            <li class="flex items-center text-[20px]  justify-start gap-[30px] w-fit p-2.5 hover:cursor-pointer hover:bg-opacity-[15%] hover:rounded-full hover:bg-blue-300">
+              <img class="w-5" src="img/notify.svg" alt="" />
+              notification
+            </li>
+            <li class="flex items-center text-[20px]  justify-start gap-[30px] w-fit p-2.5 hover:cursor-pointer hover:bg-opacity-[15%] hover:rounded-full hover:bg-blue-300">
+              <img class="w-5" src="img/mess.svg" alt="" />
+              Message
+            </li>
+            <li class="flex items-center text-[20px]  justify-start gap-[30px] w-fit p-2.5 hover:cursor-pointer hover:bg-opacity-[15%] hover:rounded-full hover:bg-blue-300">
+              <img class="w-5" src="img/Grok.svg" alt="" />
+              Grok
+            </li>
+            <li class="flex items-center text-[20px]  justify-start gap-[30px] w-fit p-2.5 hover:cursor-pointer hover:bg-opacity-[15%] hover:rounded-full hover:bg-blue-300">
+              <img class="w-5" src="img/List.svg" alt="" />
+              Lists
+            </li>
+            <li class="flex items-center text-[20px]  justify-start gap-[30px] w-fit p-2.5 hover:cursor-pointer hover:bg-opacity-[15%] hover:rounded-full hover:bg-blue-300">
+              <img class="w-5" src="img/Book.svg" alt="" />
+              Bookmarks
+            </li>
+            <li class="flex items-center text-[20px]  justify-start gap-[30px] w-fit p-2.5 hover:cursor-pointer hover:bg-opacity-[15%] hover:rounded-full hover:bg-blue-300">
+              <img class="w-5" src="img/group_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+              Communities
+            </li>
+            <li class="flex items-center text-[20px]  justify-start gap-[30px] w-fit p-2.5 hover:cursor-pointer hover:bg-opacity-[15%] hover:rounded-full hover:bg-blue-300">
+              <img class="w-5" src="img/premium.svg" alt="" />
+              Premium
+            </li>
+
+            <li class="flex items-center text-[20px]  justify-start gap-[30px] w-fit p-2.5 hover:cursor-pointer hover:bg-opacity-[15%] hover:rounded-full hover:bg-blue-300">
+              <img class="w-5" src="img/profile.svg" alt="" />
+              Profile
+            </li>
+
+            <li class="flex items-center text-[20px]  justify-start gap-[30px] w-fit p-2.5 hover:cursor-pointer hover:bg-opacity-[15%] hover:rounded-full hover:bg-blue-300">
+              <img class="w-5" src="img/more.svg" alt="" />
+              More
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="middle h-screen border-[1px] border-y-black w-2/3" >b</div>
-      <div class="right h-screen border-x-2   border-transparent  w-1/3 rounded-2xl text-white">Right</div>
+      <div class="middle h-screen border-[.5px] border-y-black w-[80%]">b</div>
+      <div class="right h-screen w-[58%] text-white">
+        <div class="content w-[75%] h-full p-1 ml-7 flex flex-col gap-4 mt-2">
+            <div class="search">
+                <input class="bg-[#202327] rounded-full w-full px-14 py-3" type="text" placeholder="Search">
+            </div>
+            <div class="subscribe h-36 bg-[#202327] rounded-2xl w-full p-3 space-y-2 overflow-hidden">
+                <div class="head font-sans font-bold text-[19px]">Subscribe to Premium</div>
+                <div class="c text-sm">
+                    Subscribe to unlock new features and if eligible, receive a share of ads revenue.
+                </div>
+                <div class="btn bg-[#1C98EB] w-1/3 font-sans font-bold rounded-full flex justify-center px-3 py-2 hover:cursor-pointer hover:w-[120px] transition-all">
+                    Subscribe
+                </div>
+            </div>
+            <div class="Happenning h-[70vh] bg-[#202327] rounded-2xl w-full relative">
+                <div class="heading font-sans font-bold text-[20px] p-3.5">What’s happening</div>
+                <div class="cont h-[70%] mt-5 flex flex-col gap-3 cursor-pointer w-full overflow-scroll overflow-x-hidden overscroll-contain scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+                    <div class="boxes hover:bg-[#27292c] w-full px-2">
+                      <div class="text-gray-500 text-sm">Trending in India</div>
+                      <div class="font-bold text-[14px]">#Orry</div>
+                      <div class="text-gray-500 text-sm">40.3K Posts</div>
+                    </div>
+                    <div class="boxes hover:bg-[#27292c] w-full px-2">
+                      <div class="text-gray-500 text-sm">Trending in India</div>
+                      <div class="font-bold text-[14px]">#Orry</div>
+                      <div class="text-gray-500 text-sm">40.3K Posts</div>
+                    </div>
+                    <div class="boxes hover:bg-[#27292c] w-full px-2">
+                      <div class="text-gray-500 text-sm">Trending in India</div>
+                      <div class="font-bold text-[14px]">#Orry</div>
+                      <div class="text-gray-500 text-sm">40.3K Posts</div>
+                    </div>
+                    <div class="boxes hover:bg-[#27292c] w-full px-2">
+                      <div class="text-gray-500 text-sm">Trending in India</div>
+                      <div class="font-bold text-[14px]">#Orry</div>
+                      <div class="text-gray-500 text-sm">40.3K Posts</div>
+                    </div>
+                    <div class="boxes hover:bg-[#27292c] w-full px-2">
+                      <div class="text-gray-500 text-sm">Trending in India</div>
+                      <div class="font-bold text-[14px]">#Orry</div>
+                      <div class="text-gray-500 text-sm">40.3K Posts</div>
+                    </div>
+                    <div class="boxes hover:bg-[#27292c] w-full px-2">
+                      <div class="text-gray-500 text-sm">Trending in India</div>
+                      <div class="font-bold text-[14px]">#Orry</div>
+                      <div class="text-gray-500 text-sm">40.3K Posts</div>
+                    </div>
+                    <div class="boxes hover:bg-[#27292c] w-full px-2">
+                      <div class="text-gray-500 text-sm">Trending in India</div>
+                      <div class="font-bold text-[14px]">#Orry</div>
+                      <div class="text-gray-500 text-sm">40.3K Posts</div>
+                    </div>
+                
+                </div>
+                <h3 class="text-blue-400 mb-0 absolute bottom-5 left-5 cursor-pointer">See More</h3>
+            </div>
+        </div>
+    </div>
+    
     </div>
   </body>
 </html>
+
+
+
+<!-- 
+  
+ -->
