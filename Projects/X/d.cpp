@@ -1,48 +1,24 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-class Solution
-{
+class Solution {
 public:
-    vector<vector<int>> insert(vector<vector<int>> &in, vector<int> &nin)
-    {
-        int i = 0;
-        int j = 0;
-        vector<vector<int>> res;
-        while (in[i][1]<nin[0] and i < in.size())
-        {
-            res.push_back(in[i]);
-            i++;
+    int leastInterval(vector<char>& tasks, int n) {
+        vector<char>v;
+        unordered_map<char,int>mp;
+        pair<char,int>p={'1',0};
+        for(char i : tasks){
+            mp[i]++;
+            if(mp[i]>p.second){
+                p.first=i;
+                p.second=mp[i];
+            }
         }
-        j = i;
-        while (in[j][0] <=nin[1] and j < in.size())
-        {
-            nin[0] = min(nin[0], in[j][0]);
-            nin[1]=max(nin[1],in[j][1]);
-            j++;
-        }
-        res.push_back(nin);
-        while(j<in.size())
-        {
-            res.push_back(in[j]);
-            j++;
-        }
-        return res;
+        int ans=p.second+(n*(p.second-1))+(mp.size()-1);
+        return ans;
     }
 };
-int main()
-{
-   
-    vector<vector<int>> in ={{1,2},{3,5},{6,7},{8,10},{12,16}}; // little bigger array
-    vector<int> nin = {4,8};
+int main(){
     Solution s;
-    vector<vector<int>> res = s.insert(in, nin);
-    for (int i = 0; i < res.size(); i++)
-    {
-        for (int j = 0; j < res[i].size(); j++)
-        {
-            cout << res[i][j] << " ";
-        }
-        cout << endl;
-    }
-    return 0;
+    vector<char>tasks= {'A','A','A','B','B','C'};
+    cout<<s.leastInterval(tasks,1);
 }
