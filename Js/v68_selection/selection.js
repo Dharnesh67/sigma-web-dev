@@ -8,7 +8,9 @@ b.style.backgroundColor = "cyan"
 
 // class selection  
 let c = document.getElementsByClassName("box")
-console.log(c);
+console.log("C", c);
+
+// console.log(c);
 c[1].style.backgroundColor = "brown"
 
 
