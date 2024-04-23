@@ -1,0 +1,18 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(180, 180, 255);
+}
+
+nav{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    /* border-radius: 20px; */
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    gap: 35px;
+}
