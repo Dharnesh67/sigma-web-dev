@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class A{
+            constructor(name ,Khandaan){
+                this.name=name;
+                this.Khandaan=Khandaan
+                console.log("object is created");
+            }
+            fun(){
+                console.log("Hello A i am Fun of Super function");
+            }
+            fun1(){
+                console.log("Hello A i am Fun1 function");
+            }
+        }
+        class l extends A{
+            fun(){
+                super.fun();
+                console.log("Hello A i am Fun in l function");
+            }
+        }
+        let a=new A("Dharmesh",'Raikwar');
+        a.fun()
+        a.fun1()
+        console.log(a.name);
+        console.log(a.Khandaan);
+        let shera=new l("shera","Lion king ");
+        shera.fun();
+        console.log(shera);
+        
+    </script>
+</body>
+</html>
