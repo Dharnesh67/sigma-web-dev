@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Navbar from './components/Navbar'
 
 function App() {
   const handleEvent = () => {
@@ -20,13 +21,15 @@ function App() {
   
   return (
     <>
+      <Navbar count={count}/>
       <div className="button">
         <button onClick={handleEvent}>CLICK ME</button>
         <button onMouseEnter={handlemouse} >Mouse</button>
-        {/* <input type="text" value={input} onChange={handleinput}/> */}
-        <input type="text" name='email' value={input.email} onChange={handleinput}/>
+        <input type="text" value={input} onChange={handleinput}/>
+       <input type="text" name='email' value={input.email} onChange={handleinput}/>
         <input type="tel" name='phone'  value={input.phone} onChange={handleinput}/>
       </div>
+      
     </>
   )
 }
