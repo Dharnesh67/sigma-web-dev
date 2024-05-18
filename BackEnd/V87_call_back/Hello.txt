@@ -1,0 +1,1 @@
+Hello This file is written by fs module of nodejs hello
