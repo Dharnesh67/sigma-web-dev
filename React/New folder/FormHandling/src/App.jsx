@@ -2,32 +2,43 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import { useForm } from "react-hook-form";
 function App() {
   const [count, setCount] = useState(0)
-
+  // React Hook form handling
+  const {
+    register,
+    handleSubmit,
+   
+    watch,
+    formState: { errors,isSubmitting},
+  } = useForm();
+  const delay = (t)=> {
+    return new Promise((resolve,reject) => {
+      setTimeout(() => {
+        resolve();
+      }, t*1000);
+    });
+  }
+  
+  const onSubmit = async (data) => {
+    await delay(2);
+    console.log(data);
+  };
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <> 
+      {isSubmitting && <h1>Loading...</h1>}
+      <div className="container">
+        <form action="" onSubmit={handleSubmit(onSubmit)}>
+          <input placeholder='Username' {...register("Username",{required:{value:true,message:"REQUIRED"},minLength:{value:5,message:"MINIMUM LENGTH IS 5"},maxLength:{value:8,message:"MAXIMUM LENGTH IS 8"}})} type="text" /> 
+          {errors.Username && <p>{errors.Username.message}</p>}
+          <br />
+          <input placeholder='Password' {...register("Password",{required:true,maxLength:6,minLength:2})} type="password"  />
+          {errors.Password && <p>Password is required</p>}
+          <br />
+          <input disabled={isSubmitting}  type="submit"  />
+        </form>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
